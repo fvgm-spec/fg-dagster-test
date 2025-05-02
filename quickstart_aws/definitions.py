@@ -10,7 +10,7 @@ from dagster_aws.s3 import S3PickleIOManager, S3Resource
 from . import assets
 
 daily_refresh_schedule = ScheduleDefinition(
-    job=define_asset_job(name="all_assets_job"), cron_schedule="18 0 * * *"
+    job=define_asset_job(name="all_assets_job"), cron_schedule="0 18 * * *"
 )
 
 my_s3_resource = S3Resource()
